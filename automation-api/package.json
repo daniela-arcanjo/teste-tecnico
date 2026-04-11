@@ -1,0 +1,16 @@
+{
+  "name": "automation-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+        "test-headed": "cypress run --headed",
+    "test-headless": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^15.13.1",
+    "cypress-plugin-api": "^2.11.2"
+  }
+}
