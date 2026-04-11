@@ -1,0 +1,14 @@
+{
+    "zipCode": {
+        "valid": {
+            "withoutMask": "05820200",
+            "withMask": "05820-200"
+        },
+        "invalid": {
+            "nonExistent": "00000000",
+            "lessThan8Digits": "12345",
+            "moreThan8Digits": "123456789",
+            "invalidFormat": "ABC12345"
+        }
+    }
+}
