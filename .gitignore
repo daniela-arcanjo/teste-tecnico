@@ -1,4 +1,7 @@
 node_modules/
-reports/
-videos/
-screenshots/
+automation-web/cypress/reports/
+automation-api/cypress/reports/
+automation-api/cypress/videos/
+automation-web/cypress/videos/
+automation-api/cypress/screenshots/
+automation-web/cypress/screenshots/

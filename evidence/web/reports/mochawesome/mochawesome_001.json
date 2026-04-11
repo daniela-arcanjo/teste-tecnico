@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-11T20:43:58.466Z",
+    "end": "2026-04-11T20:44:02.922Z",
+    "duration": 4456,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "303e8995-037d-4d3e-bc8c-62dc7080c7cf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cart.cy.js",
+      "file": "cypress\\e2e\\cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e32bd65-3383-4ab5-8e08-88e3df10ff71",
+          "title": "Carrinho",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve adicionar um produto ao carrinho com sucesso",
+              "fullTitle": "Carrinho Deve adicionar um produto ao carrinho com sucesso",
+              "timedOut": null,
+              "duration": 2175,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addProductToCart();\ncy.contains('span', 'Your Cart').should('be.visible');\ncy.contains('span', '1').should('be.visible');\ncy.contains('div', this.products.sauceLabsBackpack.name).should('be.visible');\ncy.screenshot('cart-product-added');",
+              "err": {},
+              "uuid": "6946fee6-1838-44c3-bc96-40be66ef0387",
+              "parentUUID": "2e32bd65-3383-4ab5-8e08-88e3df10ff71",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve remover um produto do carrinho com sucesso",
+              "fullTitle": "Carrinho Deve remover um produto do carrinho com sucesso",
+              "timedOut": null,
+              "duration": 2221,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addProductToCart();\ncy.removeProductToCart();\ncy.contains('div', this.products.sauceLabsBackpack.name).should('not.exist');\ncy.screenshot('cart-product-removed');",
+              "err": {},
+              "uuid": "63e50116-81bf-458b-b365-576435971296",
+              "parentUUID": "2e32bd65-3383-4ab5-8e08-88e3df10ff71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6946fee6-1838-44c3-bc96-40be66ef0387",
+            "63e50116-81bf-458b-b365-576435971296"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

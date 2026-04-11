@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-11T20:40:32.760Z",
+    "end": "2026-04-11T20:40:36.498Z",
+    "duration": 3738,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "68a7daf9-c847-47be-98e2-11072ca7a08c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "536bc4a9-6829-4267-8bed-56d148751bc6",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com credenciais válidas deve redirecionar o usuário para a página de produtos",
+              "fullTitle": "Login Login com credenciais válidas deve redirecionar o usuário para a página de produtos",
+              "timedOut": null,
+              "duration": 1363,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginWithValidCredentials();\ncy.contains('span', 'Products').should('be.visible');\ncy.screenshot('login-success');",
+              "err": {},
+              "uuid": "df6a83d4-2ed8-4473-ad61-6741ba67e3fc",
+              "parentUUID": "536bc4a9-6829-4267-8bed-56d148751bc6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com credenciais inválidas deve exibir mensagem de erro e não permitir acesso ao sistema",
+              "fullTitle": "Login Login com credenciais inválidas deve exibir mensagem de erro e não permitir acesso ao sistema",
+              "timedOut": null,
+              "duration": 1753,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginWithInvalidCredentials();\ncy.contains('h3', 'Epic sadface: Username and password do not match any user in this service').should('be.visible');\ncy.screenshot('login-invalid-credentials');",
+              "err": {},
+              "uuid": "c76586de-3eae-47c5-b16d-9ee1d96ff272",
+              "parentUUID": "536bc4a9-6829-4267-8bed-56d148751bc6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve impedir login com campos obrigatórios não preenchidos",
+              "fullTitle": "Login Deve impedir login com campos obrigatórios não preenchidos",
+              "timedOut": null,
+              "duration": 578,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginWithEmptyFields();\ncy.contains('h3', 'Epic sadface: Username is required').should('be.visible');\ncy.screenshot('login-required-fields');",
+              "err": {},
+              "uuid": "61a567d7-308f-4992-9991-a0872aebf3e5",
+              "parentUUID": "536bc4a9-6829-4267-8bed-56d148751bc6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "df6a83d4-2ed8-4473-ad61-6741ba67e3fc",
+            "c76586de-3eae-47c5-b16d-9ee1d96ff272",
+            "61a567d7-308f-4992-9991-a0872aebf3e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3694,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
