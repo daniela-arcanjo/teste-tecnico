@@ -1,4 +1,3 @@
-
 describe('Checkout', () => {
     beforeEach(() => {
         cy.visit('/')
@@ -10,5 +9,4 @@ describe('Checkout', () => {
         cy.completeCheckout()
         cy.contains('h2', 'Thank you for your order!').should('be.visible')
     })
-
 })
