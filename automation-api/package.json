@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test-headed": "cypress run --headed",
-    "test-headless": "cypress run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,7 @@
   "devDependencies": {
     "cypress": "^15.13.1",
     "cypress-plugin-api": "^2.11.2",
-        "mochawesome": "^7.1.4",
+    "mochawesome": "^7.1.4",
     "mochawesome-merge": "^4.4.1",
     "mochawesome-report-generator": "^6.3.2"
   }
