@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test-headed": "cypress run --headed",
-    "test-headless": "cypress run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:chrome": "cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
