@@ -50,7 +50,7 @@ describe('Consulta CEP', () => {
     })
 
     it('Deve retornar erro ao consultar CEP vazio', function () {
-        cy.getZipCode(this.data.zipCode)
+        cy.getZipCode()
             .then((response) => {
                 expect(response.status).to.eq(400)
                 expect(response.body.message).to.eq("CEP deve conter exatamente 8 caracteres.")
