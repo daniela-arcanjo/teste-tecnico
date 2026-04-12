@@ -41,7 +41,7 @@ Então deve retornar status code 400
 E deve retornar mensagem informando que o CEP possui mais de 8 caracteres
 
 Cenário: Validar estrutura do retorno da API
-Dado que possuo um CEP válido "01001000"
+Dado que possuo um CEP válido "05820200"
 Quando realizo a requisição de consulta de CEP
 Então deve retornar status code 200
 E o retorno deve conter os campos:
