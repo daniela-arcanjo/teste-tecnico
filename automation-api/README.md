@@ -69,3 +69,32 @@ Executa os testes via linha de comando com o navegador aberto, permitindo acompa
 ```
 npm run cy:run:headed
 ```
+
+## Estrutura do Projeto
+
+A estrutura foi organizada para garantir escalabilidade, reutilização de código e boas práticas de automação com Cypress.
+
+
+```text
+cypress/
+├── e2e/                  → Testes E2E (specs)
+│   └── consultZipCode.cy.js
+│
+├── fixtures/            → Massa de dados estática (JSON)
+│   ├── example.json
+│   └── zipCodeData.json
+│
+├── reports/            → Relatórios de execução
+│
+├── screenshots/        → Prints de falhas dos testes
+│
+├── support/            → Configuração global do Cypress
+│   ├── commands/       → Custom commands reutilizáveis
+│   │   └── consultZipCode.js
+│   ├── commands.js     → Importação de commands
+│   └── e2e.js          → Setup global dos testes
+│
+├── videos/             → Gravação das execuções
+│
+cypress.config.js       → Configuração principal do Cypress
+package.json            → Dependências e scripts do projeto
