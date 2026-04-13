@@ -1,5 +1,4 @@
 Cypress.Commands.add('completeCheckout', () => {
-    // cy.fixture('credentials').then(credentials => {
     cy.get('[data-test="checkout"]').click()
     cy.fixture('checkout').then(checkout => {
         cy.get('[data-test="firstName"]').type(checkout.firstName)
